@@ -15,3 +15,34 @@
 	width:1000px;
 	background-color: brown;
 }
+.container{
+	width: 100%;
+	background-color: aquamarine;
+	padding: 30px 30px;
+}
+.container .row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 50px;
+}
+.container .column{
+	 width: 200px;
+	margin: 20px 30px;
+	padding: 20px 30px;
+	flex-wrap: wrap;
+	overflow: hidden;
+	border: 1px solid black;
+	
+	
+
+}
+.container img{
+	width: 200px;
+}
+.container h4{
+	font-size: 30px;
+	font-weight: 700;
+	color: antiquewhite;
+}
