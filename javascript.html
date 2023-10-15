@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body style="background-color: black; display: flex; height: 100vh; flex-direction: column; padding: 20px">
+		<img id="bulb-off" style="margin: auto" src="/images/bulb-off.png" alt="" />
+		<img id="bulb-on" style="margin: auto; display: none" src="/images/bulb-on.png" alt="" />
+		<button
+			id="switch-button"
+			style="padding: 24px; width: fit-content; margin-left: auto; margin-right: auto; cursor: pointer"
+		>
+			Switch on
+		</button>
+
+		<script>
+			const switchButton = document.querySelector("#switch-button");
+			const bulbOff = document.querySelector("#bulb-off");
+			const bultOn = document.querySelector("#bulb-on");
+
+			switchButton.addEventListener("click", () => {
+				if (switchButton.textContent === "Switch off") {
+					// hide the off bulb
+					bulbOff.style.display = "none";
+					// show the on bulb
+					bultOn.style.display = "block";
+					switchButton.textContent = "Switch on";
+				} else {
+					// hide the on bulb
+					bultOn.style.display = "none";
+					// show the off bulb
+					bulbOff.style.display = "block";
+					switchButton.textContent = "Switch off";
+				}
+			});
+		</script>
+	</body>
+</html>
