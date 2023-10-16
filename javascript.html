@@ -18,21 +18,22 @@
 		<script>
 			const switchButton = document.querySelector("#switch-button");
 			const bulbOff = document.querySelector("#bulb-off");
-			const bultOn = document.querySelector("#bulb-on");
+			const bulbOn = document.querySelector("#bulb-on");
 
+			// Add a click event listener to the switch button
 			switchButton.addEventListener("click", () => {
-				if (switchButton.textContent === "Switch off") {
+				if (switchButton.textContent.trim() === "Switch on") {
+					// show the on bulb
+					bulbOn.style.display = "block";
 					// hide the off bulb
 					bulbOff.style.display = "none";
-					// show the on bulb
-					bultOn.style.display = "block";
-					switchButton.textContent = "Switch on";
+					switchButton.textContent = "Switch off";
 				} else {
 					// hide the on bulb
-					bultOn.style.display = "none";
+					bulbOn.style.display = "none";
 					// show the off bulb
 					bulbOff.style.display = "block";
-					switchButton.textContent = "Switch off";
+					switchButton.textContent = "Switch on";
 				}
 			});
 		</script>
