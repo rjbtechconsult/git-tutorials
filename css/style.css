@@ -1,0 +1,27 @@
+.myBox {
+	width: 100px;
+	height: 100px;
+	border: 2px solid blue;
+	background-color: green;
+}
+
+.round {
+	border-radius: 100%;
+}
+
+.rectangle {
+	width: 200px;
+	background-color: brown;
+}
+
+#the-h1 {
+	color: blue;
+}
+
+p {
+	color: gray;
+}
+
+div {
+	font-size: 32px;
+}
