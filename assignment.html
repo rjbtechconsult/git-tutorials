@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+    <div id="container">
+       
+        <div class="top-left square"></div>
+        <div class="top-right square"></div>
+        <div class="bottom-left square"></div>
+        <div class="bottom-right square"></div>
+        <div class="circle shape"></div>
+    </div>
+    <script>
+         const shape = document.querySelector(".shape");
+         const squares = document.querySelectorAll(".square");
+
+         let isCircle = true;
+
+        shape.addEventListener("click", function () {
+            if (isCircle) {
+                shape.style.borderRadius = "0%";
+                squares.forEach(square => {
+                    square.style.borderRadius = "50%";    
+                    
+                });
+
+            } else {
+                shape.style.borderRadius = "50%";
+                squares.forEach(square => {
+                    square.style.borderRadius = "0%";    
+                    
+                });
+            }
+            isCircle = !isCircle;
+        });
+    </script>
+</body>
+</html>
